@@ -55,7 +55,7 @@ const NavBar = () => {
           </div>
           {/* the firs bart========== */}
 
-          {/* the second bart========== */}
+          {/* the second bart */}
           <div className=" flex justify-between md:items-center md:gap-4 h-full ">
             {/* search bart */}
 
