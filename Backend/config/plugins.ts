@@ -3,13 +3,14 @@ export default ({ env }) => ({
     upload: {
       config: {
         provider: 'cloudinary',
-        providerOptions: {
+        providerOptions: { 
+
           cloud_name: env('CLOUDINARY_NAME'),
           api_key: env('CLOUDINARY_KEY'),
           api_secret: env('CLOUDINARY_SECRET'),
         },
-        actionOptions: {
-          upload: {},
+        actionOptions: { 
+          upload: {} , 
           uploadStream: {},
           delete: {},
         },

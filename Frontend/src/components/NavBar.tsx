@@ -70,7 +70,7 @@ const NavBar = () => {
               </div>
             </div>
             {/* search bart========= */}
-            {/* icon bart */}
+            {/* icon bart */} 
 
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
