@@ -10,9 +10,8 @@ const NavBar = () => {
           <div className="flex justify-between items-center gap-4 md:gap-0 h-full ">
             {/* Image */}
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              
-            <a className="p-0 m-0 overflow-hidden" href="#">
-            <Image
+              <a className="p-0 m-0 overflow-hidden" href="#">
+                <Image
                   src="/logo.png"
                   alt="Logo"
                   width={150}
