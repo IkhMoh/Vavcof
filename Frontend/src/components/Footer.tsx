@@ -1,14 +1,21 @@
 import React from "react";
-
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-red-300 lg:grid lg:grid-cols-5">
       <div className="relative block h-12 lg:col-span-2 lg:h-full">
-        <img
-          src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
-          alt=""
+        <Image
+          src="/bar-concept.jpg"
+          alt="image for store"
+          width={500}
+          height={500}
           className="absolute inset-0 h-full w-full object-cover"
         />
+        {/* <img
+          src=" https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80 "
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        /> */}
       </div>
 
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
