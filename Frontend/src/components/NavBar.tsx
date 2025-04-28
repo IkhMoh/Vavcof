@@ -3,7 +3,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import Image from "next/image";
 const NavBar = () => {
   return (
-    <header className="bg-red-400">
+    <header className="bg-orange-200 shadow-2xl">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between ">
           {/* the firs bart */}
@@ -62,8 +62,9 @@ const NavBar = () => {
             <div className="flex items-center justify-center  p-4">
               <div className="flex w-80 ">
                 <input
+                  
                   type="text"
-                  value=""
+                  value="hi"
                   placeholder="🔍 Search..."
                   className="w-64 px-2 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:w-96 transition-all"
                 />
