@@ -1,12 +1,12 @@
-import Categorycard from "@/components/Card";
+import Card from "@/components/Card";
 import React from "react";
 
-function page() {
+const page = () => {
   return (
     <div>
-      <Categorycard/>
+      <Card />
     </div>
   );
-}
+};
 
 export default page;

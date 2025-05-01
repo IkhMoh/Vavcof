@@ -3,11 +3,11 @@ import React from "react";
 function Card() {
   return (
     <div>
-      <a href="#" className="block rounded-lg p-4 shadow-xs shadow-indigo-100">
+      <a href="#" className="block rounded-lg p-4 shadow-xs shadow-indigo-100 bg-amber-300 w-fit">
         <img
           alt=""
           src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          className="h-56 w-full rounded-md object-cover"
+          className="h-56 w-fit rounded-md object-cover"
         />
 
         <div className="mt-2">

@@ -3,46 +3,10 @@ import React from "react";
 
 const page = () => {
   return (
-    <div> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-      <Card /> 
-    </div>   
+    <div>
+      <Card />
+    </div>
   );
 };
 
 export default page;
-  
