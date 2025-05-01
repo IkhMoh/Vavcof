@@ -1,12 +1,7 @@
-import Card from "@/components/Card";
 import React from "react";
 
 const page = () => {
-  return (
-    <div>
-      <Card />
-    </div>
-  );
+  return <div className="bg-sky-300 w-lvh h-lvh"></div>;
 };
 
 export default page;
