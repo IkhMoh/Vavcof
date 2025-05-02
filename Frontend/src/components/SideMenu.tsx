@@ -6,9 +6,8 @@ const SideMenu = () => {
       <div>
         <ul className="flex flex-col space-y-2">
           <li>
-            <strong className="block text-xs font-medium text-gray-400 uppercase">
-              {" "}
-              General{" "}
+            <strong className="block text-lg font-medium text-gray-600 ">
+              Category
             </strong>
 
             <ul className="mt-2 space-y-1">
@@ -17,7 +16,7 @@ const SideMenu = () => {
                   href="#"
                   className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                 >
-                  Profile
+                  Breakfast
                 </a>
               </li>
 
@@ -26,7 +25,7 @@ const SideMenu = () => {
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Team
+                  Drinks
                 </a>
               </li>
 
@@ -35,7 +34,7 @@ const SideMenu = () => {
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Projects
+                  Desserts
                 </a>
               </li>
 
@@ -44,7 +43,7 @@ const SideMenu = () => {
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Meetings
+                  Iced Coffee
                 </a>
               </li>
 
@@ -53,16 +52,15 @@ const SideMenu = () => {
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Calendar
+                  Hot Coffee
                 </a>
               </li>
             </ul>
           </li>
 
           <li>
-            <strong className="block text-xs font-medium text-gray-400 uppercase">
-              {" "}
-              Support{" "}
+            <strong className="block text-lg font-medium text-gray-600 ">
+              Raw materials
             </strong>
 
             <ul className="mt-2 space-y-1">
@@ -81,15 +79,6 @@ const SideMenu = () => {
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
                   Help
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                >
-                  Settings
                 </a>
               </li>
             </ul>
