@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 const NavBar = () => {
   return (
     <header className="bg-orange-100 shadow-2xl ">
@@ -10,7 +11,7 @@ const NavBar = () => {
           <div className="flex flex-1 justify-around   items-center gap-4 md:gap-0 h-full  ">
             {/* Image */}
             <div className="flex md:flex md:items-center md:gap-12">
-              <a className="p-0 m-0 overflow-hidden" href="#">
+              <Link className="p-0 m-0 overflow-hidden" href={"/"}>
                 <Image
                   src="/logo.png"
                   alt="Logo"
@@ -18,7 +19,7 @@ const NavBar = () => {
                   height={100}
                   className="h-16 p-0 m-0 overflow-hidden"
                 />
-              </a>
+              </Link>
             </div>
             {/* Image================ */}
             {/* Link */}
