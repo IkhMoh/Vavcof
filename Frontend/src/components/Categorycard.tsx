@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Categorycard() {
   return (
-    <Link href="/products">
+    <Link href="/products/Breakfast">
       <div className="group relative block bg-black">
         <Image
           width={300}
