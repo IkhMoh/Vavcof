@@ -2,8 +2,8 @@ import React from "react";
 
 const SideMenu = () => {
   return (
-    <div>
-      <div>
+    
+      <div className="fixed top-16 left-0  flex flex-col space-y-2 h-fit rounded-br-md bg-white w-1/6 shadow-lg">
         <ul className="flex flex-col space-y-2">
           <li>
             <strong className="block text-lg font-medium text-gray-600 ">
@@ -85,7 +85,7 @@ const SideMenu = () => {
           </li>
         </ul>
       </div>
-    </div>
+   
   );
 };
 
