@@ -12,7 +12,7 @@ function Categorysection() {
           <Categorycard />
         </div>
       </div>
-    </section>
+    </section>    
   );
 }
 

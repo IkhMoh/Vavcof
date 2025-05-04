@@ -72,7 +72,7 @@ function Card() {
 
                 <p className="font-medium">2 rooms</p>
               </div>
-            </div>
+            </div>  
 
             
           </div>
