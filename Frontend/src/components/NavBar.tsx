@@ -15,9 +15,10 @@ const NavBar = () => {
                 <Image
                   src="/logo.png"
                   alt="Logo"
-                  width={150}
+                  width={100}
                   height={100}
-                  className="h-16 p-0 m-0 overflow-hidden"
+                  className="h-16 w-auto p-0 m-0 overflow-hidden"
+                  priority 
                 />
               </Link>
             </div>
@@ -59,6 +60,7 @@ const NavBar = () => {
                 <input
                   type="text"
                   value="hi"
+                  readOnly 
                   placeholder="🔍 Search..."
                   className="w-64 px-2 py-2 rounded-lg border-2 h-9 focus:w-96 transition-all"
                 />
