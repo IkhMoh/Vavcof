@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 const SideMenu = () => {
+   
   return (
     <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
       <ul className="flex flex-col space-y-2 mb-20 p-2">
