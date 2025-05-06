@@ -19,6 +19,10 @@ async function Workspace() {
               image={images}
               price={product.price}
               title={product.title}
+              params={{
+                category: product.category,
+                id: product.id,
+              }}
             />
           );
         })}

@@ -5,15 +5,17 @@ type CardProps = {
   image: { url: string }[];
   price: number;
   title: string;
+  params: {
+    category: string;
+    id: number;
+  };
 };
 
-function Card({ image, price, title, params }: CardProps) {
-  const category = params
-  console.log(category);
+function Card({ image , price, title, params }: CardProps) {
   return (
     <div>
       <Link
-        href={"/"}
+        href={"/products/"+params.category + "/" + params.id}
         className="block rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit"
       >
         <Image

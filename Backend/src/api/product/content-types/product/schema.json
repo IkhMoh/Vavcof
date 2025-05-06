@@ -40,8 +40,8 @@
         "Breakfast",
         "Drinks",
         "Desserts",
-        "Iced Coffee",
-        "Hot Coffee"
+        "IcedCoffee",
+        "HotCoffee"
       ],
       "required": true
     },
