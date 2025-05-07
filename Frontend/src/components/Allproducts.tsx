@@ -10,7 +10,7 @@ function Allproducts() {
             <div className="text-center ltr:sm:text-left rtl:sm:text-right">
               <div className="mt-4 sm:mt-8">
                 <Link
-                  href={"/products/all"}
+                  href={"/products/All"}
                   className="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
                 >
                   Get Yours Today

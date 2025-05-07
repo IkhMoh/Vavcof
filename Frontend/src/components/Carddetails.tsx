@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 type Props = {
-  image: string;
+  image: any;
   title: string;
   description: string;
   price: number;
@@ -33,7 +33,8 @@ const Carddetails = ({ details }: { details: Props }) => {
               <form className="w-full h-full">
                 <div className="flex flex-wrap justify-start  w-full gap-1 [&:hover_label]:opacity-75 h-full">
                   <div className="flex items-start gap-2 h-full m-1 ">
-                    {image.map((img: string) => {
+                    {image.map((img: any) => {
+                      console.log(img);
                       return (
                         <div key={img.id} className=" h-[49px] w-[49px]  ">
                           <Image
@@ -53,7 +54,7 @@ const Carddetails = ({ details }: { details: Props }) => {
           </div>
         </div>
 
-        <div className="w-4/6 h-full p-2 flex flex-col justify-between items-start p-5 ">
+        <div className="w-4/6 h-full  flex flex-col justify-between items-start p-5 ">
           <h1 className="text-lg font-bold">{title}</h1>
 
           <h4 className="text-md ">{description}</h4>

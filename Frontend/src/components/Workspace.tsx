@@ -14,27 +14,29 @@ async function Workspace({ category }: { category: string }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen">
+    <>
       <h1 className="text-2xl font-bold ml-4">Breakfast Menu</h1>
-      <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 px-6 items-center justify-items-center my-6 overflow-y-auto">
-        {dede.map((product: any) => {
-          const images = product.image;
+      <div className="flex flex-col items-start justify-start w-full h-screen">
+        <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 px-6 items-center justify-items-center my-6 overflow-y-auto">
+          {dede.map((product: any) => {
+            const images = product.image;
 
-          return (
-            <Card
-              key={product.id}
-              image={images}
-              price={product.price}
-              title={product.title}
-              params={{
-                category: product.category,
-                id: product.id,
-              }}
-            />
-          );
-        })}
-      </ul>
-    </div>
+            return (
+              <Card
+                key={product.id}
+                image={images}
+                price={product.price}
+                title={product.title}
+                params={{
+                  category: product.category,
+                  id: product.id,
+                }}
+              />
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 }
 
