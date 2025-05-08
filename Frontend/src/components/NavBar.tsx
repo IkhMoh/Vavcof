@@ -1,14 +1,15 @@
 import React from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaSearch } from "react-icons/fa";
+
 import Image from "next/image";
 import Link from "next/link";
 const NavBar = () => {
   return (
     <header className="bg-orange-100  ">
-      <div className="max-w-screen-xl px-4 sm:px-6 lg:px-8 container mx-auto">
-        <div className="flex  h-16 items-center justify-between">
-          {/* the firs bart */}
-          <div className="flex flex-1 justify-around   items-center gap-4 md:gap-0 h-full  ">
+      <div className="">
+        <div className="flex  h-16 items-center justify-between px-4 md:px-16 ">
+          <div className="flex   justify-around   items-center gap-4 md:gap-0 h-full  ">
             {/* Image */}
             <div className="flex md:flex md:items-center md:gap-12">
               <Link className="p-0 m-0 overflow-hidden" href={"/"}>
@@ -18,63 +19,46 @@ const NavBar = () => {
                   width={100}
                   height={100}
                   className="h-16 w-auto p-0 m-0 overflow-hidden"
-                  priority 
+                  priority
                 />
               </Link>
             </div>
             {/* Image================ */}
-            {/* Link */}
-            <div className="md:flex md:items-center md:gap-12">
-              <nav aria-label="Global" className="hidden md:block">
-                <ul
-                  className="flex items-center gap-6 text-sm font-medium
-"
-                >
-                  <li>
-                    <a className="  transition   cursor-pointer">About Us</a>
-                  </li>
-
-                  <li>
-                    <a className=" transition cursor-pointer">Menu</a>
-                  </li>
-
-                  <li>
-                    <a className=" transition cursor-pointer">Shop</a>
-                  </li>
-
-                  <li>
-                    <a className=" transition cursor-pointer">Contact Us</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            {/* Link=========== */}
           </div>
-          {/* the firs bart========== */}
-          {/* the second bart */}
-          <div className=" flex flex-1 justify-around md:items-center md:gap-4 h-full  ">
-            {/* search bart */}
 
-            <div className="flex items-center justify-center  p-4">
-              <div className="flex w-80 ">
-                <input
-                  type="text"
-                  value="hi"
-                  readOnly 
-                  placeholder="🔍 Search..."
-                  className="w-64 px-2 py-2 rounded-lg border-2 h-9 focus:w-96 transition-all"
-                />
-              </div>
-            </div>
-            {/* search bart========= */}
+          <div className="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" className="hidden md:block">
+              <ul
+                className="flex items-center gap-6 text-sm font-medium
+"
+              >
+                <li>
+                  <a className="  transition   cursor-pointer">About Us</a>
+                </li>
+
+                <li>
+                  <a className=" transition cursor-pointer">Menu</a>
+                </li>
+
+                <li>
+                  <a className=" transition cursor-pointer">Shop</a>
+                </li>
+
+                <li>
+                  <a className=" transition cursor-pointer">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className=" flex  justify-around md:items-center md:gap-4 h-full  ">
             {/* icon bart */}
 
-            <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <MdOutlineShoppingCart className="cursor-pointer w-6 h-6" />
+            <div className="flex items-center gap-4 ">
+              <FaSearch className="cursor-pointer w-5 h-5" />
+              <MdOutlineShoppingCart className="cursor-pointer w-6 h-6" />
 
-                <div className="hidden sm:flex">{/* imgae profile */}</div>
-              </div>
+
               {/* for the md size */}
               {/* <div className="block md:hidden">
                            <button className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
@@ -97,7 +81,6 @@ const NavBar = () => {
             </div>
             {/* icon bart========== */}
           </div>
-          {/* the second bart========== */}
         </div>
       </div>
     </header>

@@ -16,7 +16,7 @@ function Card({ image , price, title, params }: CardProps) {
     <div>
       <Link
         href={"/products/"+params.category + "/" + params.id}
-        className="block rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit"
+        className="block rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit transition-all "
       >
         <Image
           width={200}
