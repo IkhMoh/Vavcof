@@ -13,18 +13,17 @@ const Carddetails = ({ details }: { details: Props }) => {
   return (
     <div className="w-full h-full">
       <div className="flex h-full p-2">
-        <div className="w-2/6 h-full">
-          <div className=" h-6/7  ">
+        <div className=" h-full ">
+          <div className="relative w-[340px] h-[370px] rounded-xl ">
             <Image
-              height={500}
-              width={500}
+              alt=""
               src={
                 image
                   ? image[0].url
                   : "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               }
-              alt=""
-              className="object-cover w-full h-full"
+              fill
+              className="object-cover"
             />
           </div>
           {/* colors */}
@@ -36,13 +35,15 @@ const Carddetails = ({ details }: { details: Props }) => {
                     {image.map((img: any) => {
                       console.log(img);
                       return (
-                        <div key={img.id} className=" h-[49px] w-[49px]  ">
+                        <div
+                          key={img.id}
+                          className="relative w-[49px] h-[49px] overflow-hidden"
+                        >
                           <Image
-                            height={500}
-                            width={500}
-                            src={img.url}
                             alt=""
-                            className="object-cover w-full h-full"
+                            src={img.url}
+                            fill
+                            className="object-cover"
                           />
                         </div>
                       );
@@ -54,7 +55,7 @@ const Carddetails = ({ details }: { details: Props }) => {
           </div>
         </div>
 
-        <div className="w-4/6 h-full  flex flex-col justify-between items-start p-5 ">
+        <div className="w-4/6  flex flex-col justify-between items-start p-3">
           <h1 className="text-lg font-bold">{title}</h1>
 
           <h4 className="text-md ">{description}</h4>

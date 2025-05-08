@@ -7,7 +7,7 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <header className="bg-orange-100  ">
-      <div className="">
+      <div className="container mx-auto">
         <div className="flex  h-16 items-center justify-between px-4 md:px-16 ">
           <div className="flex   justify-around   items-center gap-4 md:gap-0 h-full  ">
             {/* Image */}
