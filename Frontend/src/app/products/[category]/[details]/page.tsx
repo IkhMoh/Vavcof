@@ -11,7 +11,7 @@ async function page({ params }: { params: Params }) {
   );
 
   const data = await res.json();
-  console.log(data.data[0]);
+
   return (
     <div className="bg-white h-fit mt-4 rounded-md">
       <Carddetails details={data.data[0]} />

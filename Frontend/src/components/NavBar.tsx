@@ -1,14 +1,42 @@
+"use client";
 import React from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
-
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 const NavBar = () => {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="bg-orange-100  ">
-      <div className="container mx-auto">
-        <div className="flex  h-16 items-center justify-between px-4 md:px-16 ">
+    <header
+      className={`fixed top-0 left-0 w-full bg-orange-100 shadow transition-transform duration-300 z-50 ${
+        show ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="container w-full mx-auto">
+        <div className="flex w-full h-16 items-center justify-between px-4 md:px-16 ">
           <div className="flex   justify-around   items-center gap-4 md:gap-0 h-full  ">
             {/* Image */}
             <div className="flex md:flex md:items-center md:gap-12">
@@ -57,7 +85,6 @@ const NavBar = () => {
             <div className="flex items-center gap-4 ">
               <FaSearch className="cursor-pointer w-5 h-5" />
               <MdOutlineShoppingCart className="cursor-pointer w-6 h-6" />
-
 
               {/* for the md size */}
               {/* <div className="block md:hidden">

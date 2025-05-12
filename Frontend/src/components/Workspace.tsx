@@ -15,7 +15,7 @@ async function Workspace({ category }: { category: string }) {
 
   return (
     <>
-      <h1 className="text-2xl font-bold ml-4">Breakfast Menu</h1>
+      <h1 className="text-2xl font-bold ml-4">{category} Menu</h1>
       <div className="flex flex-col items-start justify-start w-full h-screen">
         <ul className="grid   gap-2 sm:grid-cols-2 lg:grid-cols-4 px-6 items-center justify-items-center my-6 overflow-y-auto">
           {dede.map((product: any) => {

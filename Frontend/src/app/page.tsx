@@ -6,9 +6,8 @@ export default function Home() {
     <main className="">
       <Hero />
       <Categorysection />
-      <Allproducts/>
+      <Allproducts />
       <Categorysection />
     </main>
   );
 }
-  
