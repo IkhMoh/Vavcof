@@ -6,7 +6,7 @@ type Props = {
  const  SideMenu = ({ category }: Props) => {
   return (
     <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
-      <ul className="flex flex-col space-y-2 mb-20 p-2">
+      <ul className="flex flex-col space-y-2 mb-20 p-0.5 lg:p-2">
         <li>
           <strong className="block text-lg font-medium text-gray-600 ">
             Category
@@ -94,7 +94,7 @@ type Props = {
 
         <li>
           <strong className="block text-lg font-medium text-gray-600 ">
-            Raw materials
+            Materials
           </strong>
 
           <ul className="mt-2 space-y-1">

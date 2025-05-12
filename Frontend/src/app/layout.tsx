@@ -29,7 +29,7 @@ export default function RootLayout({
         {/* ${geistSans.variable} ${geistMono.variable} */}
         <div className="">
           <NavBar />
-          <div className="pt-20"></div>
+          <div className="pt-16"></div>
           {children}
 
           <Footer />

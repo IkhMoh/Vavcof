@@ -20,9 +20,9 @@ function Card({ image, price, title, rating, params }: CardProps) {
     <div>
       <Link
         href={"/products/" + params.category + "/" + params.id}
-        className="block p-1.5 rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit transition-all "
+        className="block p-0.5 lg:p-1 rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit transition-all "
       >
-        <div className="relative w-[240px] h-[270px] rounded-xl overflow-hidden">
+        <div className="relative w-[265px] h-[290px] rounded-xl overflow-hidden">
           {" "}
           <Image
             alt=""
@@ -66,7 +66,6 @@ function Card({ image, price, title, rating, params }: CardProps) {
                   <span className="relative text-sm font-bold  text-black transition-colors group-hover:text-white">
                     Add Item
                   </span>
-                  bu
                 </a>
               </div>
             </div>

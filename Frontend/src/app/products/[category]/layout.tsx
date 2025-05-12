@@ -13,10 +13,10 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <div className="flex lg:flex-row lg:gap-3 w-full bg-orange-200">
-      <div className="flex flex-col w-1/6 space-y-2">
+      <div className="flex  lg:w-1/6 space-y-2">
         <SideMenu category={category} />
       </div>
-      <div className="flex w-5/6 ">{children}</div>
+      <div className="flex lg:w-5/6 ">{children}</div>
     </div>
   );
 }
