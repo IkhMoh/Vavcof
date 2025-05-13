@@ -6,16 +6,30 @@ type Props = {
 const SideMenu = ({ category }: Props) => {
   return (
     <section>
-      {/* */}
-      <div className="relative md:hidden">
+      {/* mobil */}
+      <div className="relative md:hidden ">
         <details className="[&_summary::-webkit-details-marker]:hidden">
-          <div className="w-full bg-red-300">
-            <summary className="flex cursor-pointer w-fit px-6 py-2 items-center justify-center gap-2 border-b bg-amber-100 border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600">
-              <h1>category</h1>
-            </summary>
-          </div>
+          <summary className="flex cursor-pointer w-full bg-white items-center justify-center gap-2 border-b  border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600">
+            <span className="text-sm font-medium  py-1 px-2"> Category </span>
+            <span className="transition group-open:-rotate-180">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </summary>
 
-          <div className="z-50 mt-2 ltr:start-0">
+          <div className="z-50 mt-2 ltr:start-0 w-1/2">
             <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
               <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
                 <ul className="flex flex-col space-y-2 mb-20 p-0.5 lg:p-2">
@@ -136,7 +150,7 @@ const SideMenu = ({ category }: Props) => {
         </details>
       </div>
 
-      {/* */}
+      {/*pc */}
       <div className="hidden md:block">
         <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
           <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">

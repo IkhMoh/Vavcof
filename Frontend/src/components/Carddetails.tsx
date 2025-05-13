@@ -12,9 +12,9 @@ const Carddetails = ({ details }: { details: Props }) => {
   console.log(details);
   return (
     <div className="w-full h-full">
-      <div className="flex h-full p-2">
-        <div className=" h-full ">
-          <div className="relative w-[340px] h-[370px] rounded-xl ">
+      <div className="md:flex h-full p-2">
+        <div className="h-full flex md:flex-col ">
+          <div className="relative w-[310px] md:w-[340px] h-[270px] md:h-[370px] rounded-xl ">
             <Image
               alt=""
               src={
@@ -28,16 +28,16 @@ const Carddetails = ({ details }: { details: Props }) => {
           </div>
           {/* colors */}
           <div className="h-1/7">
-            <div className=" flex gap-1 h-full w-full">
+            <div className="flex h-full w-full">
               <form className="w-full h-full">
-                <div className="flex flex-wrap justify-start  w-full gap-1 [&:hover_label]:opacity-75 h-full">
-                  <div className="flex items-start gap-2 h-full m-1 ">
+                <div className="flex flex-wrap  justify-start  w-full  [&:hover_label]:opacity-75 h-full">
+                  <div className="md:flex grid  items-start gap-y-2 h-full px-1 ">
                     {image.map((img: any) => {
                       console.log(img);
                       return (
                         <div
                           key={img.id}
-                          className="relative w-[49px] h-[49px] overflow-hidden"
+                          className="relative w-[53px] h-[49px] overflow-hidden"
                         >
                           <Image
                             alt=""
@@ -55,10 +55,10 @@ const Carddetails = ({ details }: { details: Props }) => {
           </div>
         </div>
 
-        <div className="w-4/6  flex flex-col justify-between items-start p-3">
+        <div className="md:w-4/6  flex flex-col justify-between gap-y-2 items-start md:p-3 ">
           <h1 className="text-lg font-bold">{title}</h1>
 
-          <h4 className="text-md ">{description}</h4>
+          <h4 className="text-md">{description}</h4>
           <div className="flex gap-2 items-center">
             <h1 className="text-md font-bold">Rating:</h1>
             <h1 className="text-lg font-bold">{rating}⭐</h1>
