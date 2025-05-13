@@ -12,11 +12,11 @@ export default async function RootLayout({ children, params }: Props) {
   const { category } = await params;
 
   return (
-    <div className="flex lg:flex-row lg:gap-3 w-full bg-orange-200">
-      <div className="flex  lg:w-1/6 space-y-2">
+    <div className="lg:flex lg:flex-row lg:gap-3 w-full ">
+      <div className=" lg:w-1/6 space-y-2 ">
         <SideMenu category={category} />
       </div>
-      <div className="flex lg:w-5/6 ">{children}</div>
+      <div className=" lg:w-5/6 ">{children}</div>
     </div>
   );
 }
