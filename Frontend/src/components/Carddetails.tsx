@@ -31,7 +31,7 @@ const Carddetails = ({ details }: { details: Props }) => {
             <div className="flex h-full w-full">
               <form className="w-full h-full">
                 <div className="flex flex-wrap  justify-start  w-full  [&:hover_label]:opacity-75 h-full">
-                  <div className="md:flex grid  items-start gap-y-2 h-full px-1 ">
+                  <div className="md:flex grid  items-start gap-y-2 md:gap-2 h-full px-1 md:px-0 md:mt-1">
                     {image.map((img: any) => {
                       console.log(img);
                       return (
