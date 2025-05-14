@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
+
 const NavBar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,80 +37,100 @@ const NavBar = () => {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container w-full mx-auto">
-        <div className="flex w-full h-16 items-center justify-between px-4 md:px-16 ">
-          <div className="flex   justify-around   items-center gap-4 md:gap-0 h-full  ">
-            {/* Image */}
-            <div className="flex md:flex md:items-center md:gap-12">
-              <Link className="p-0 m-0 overflow-hidden" href={"/"}>
-                <Image
-                  src="/logo.png"
-                  alt="Logo"
-                  width={100}
-                  height={100}
-                  className="h-16 w-auto p-0 m-0 overflow-hidden"
-                  priority
-                />
-              </Link>
-            </div>
-            {/* Image================ */}
+      <div className="container mx-auto w-full">
+        <div className="flex h-16 items-center justify-between px-4 md:px-16">
+          {/* Logo */}
+          <div className="flex items-center gap-4">
+            <Link className="p-0 m-0 overflow-hidden" href={"/"}>
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="h-16 w-auto"
+                priority
+              />
+            </Link>
           </div>
 
-          <div className="md:flex md:items-center md:gap-12">
-            <nav aria-label="Global" className="hidden md:block">
-              <ul
-                className="flex items-center gap-6 text-sm font-medium
-"
-              >
-                <li>
-                  <a className="  transition   cursor-pointer">About Us</a>
-                </li>
+          {/* Desktop Nav */}
+          <nav aria-label="Global" className="hidden md:block">
+            <ul className="flex items-center gap-6 text-sm font-medium">
+              <li>
+                <a className="cursor-pointer">About Us</a>
+              </li>
+              <li>
+                <a className="cursor-pointer">Menu</a>
+              </li>
+              <li>
+                <a className="cursor-pointer">Shop</a>
+              </li>
+              <li>
+                <a className="cursor-pointer">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
 
-                <li>
-                  <a className=" transition cursor-pointer">Menu</a>
-                </li>
+          {/* Icons and Mobile Button */}
+          <div className="flex items-center gap-4">
+            <FaSearch className="w-5 h-5 cursor-pointer" />
+            <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
 
-                <li>
-                  <a className=" transition cursor-pointer">Shop</a>
-                </li>
-
-                <li>
-                  <a className=" transition cursor-pointer">Contact Us</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className=" flex  justify-around md:items-center md:gap-4 h-full  ">
-            {/* icon bart */}
-
-            <div className="flex items-center gap-4 ">
-              <FaSearch className="cursor-pointer w-5 h-5" />
-              <MdOutlineShoppingCart className="cursor-pointer w-6 h-6" />
-
-              {/* for the md size */}
-              {/* <div className="block md:hidden">
-                           <button className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                             <svg
-                               xmlns="http://www.w3.org/2000/svg"
-                               className="size-5"
-                               fill="none"
-                               viewBox="0 0 24 24"
-                               stroke="currentColor"
-                               strokeWidth="2"
-                             >
-                               <path
-                                 strokeLinecap="round"
-                                 strokeLinejoin="round"
-                                 d="M4 6h16M4 12h16M4 18h16"
-                               />
-                             </svg>
-                           </button>
-                         </div> */}
-            </div>
-            {/* icon bart========== */}
+            {/* Mobile Menu Toggle */}
+            <button
+              className="block md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {menuOpen ? (
+                <HiX className="w-6 h-6" />
+              ) : (
+                <HiMenuAlt3 className="w-6 h-6" />
+              )}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu Items */}
+        {menuOpen && (
+          <nav className="md:hidden px-4 pb-4">
+            <ul className="flex  gap-4 text-sm font-medium">
+              <li>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About Us
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Menu
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Shop
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
     </header>
   );
