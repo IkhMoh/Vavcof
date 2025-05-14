@@ -20,9 +20,9 @@ function Card({ image, price, title, rating, params }: CardProps) {
     <div>
       <Link
         href={"/products/" + params.category + "/" + params.id}
-        className="block p-0.5 lg:p-1 rounded-sm shadow-xs shadow-indigo-100 bg-blue-200 w-fit transition-all "
+        className="block  rounded-md shadow-xs shadow-indigo-100 bg-gray-50 w-fit transition-all "
       >
-        <div className="relative w-[265px] h-[290px] rounded-xl overflow-hidden">
+        <div className="relative w-[265px] h-[290px]  overflow-hidden">
           {" "}
           <Image
             alt=""
@@ -36,7 +36,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
           />
         </div>
 
-        <div className="mt-1 w-full min-h-28 ">
+        <div className="mt-1 w-full min-h-28 p-0.5 lg:p-1">
           <dl>
             <div>
               <dt className="sr-only">Address</dt>
