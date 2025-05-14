@@ -58,12 +58,12 @@ function Card({ image, price, title, rating, params }: CardProps) {
               </div>
               <div className=" flex items-center justify-center ">
                 <a
-                  className="group relative inline-block overflow-hidden border border-black px-4 py-1 rounded-4xl focus:ring-3 focus:outline-hidden"
+                  className="group relative inline-block overflow-hidden border border-black px-3 py-0.5 rounded-sm focus:ring-3 focus:outline-hidden"
                   href="#"
                 >
                   <span className="absolute inset-y-0 left-0 w-[0px] bg-black transition-all group-hover:w-full"></span>
 
-                  <span className="relative text-sm font-bold  text-black transition-colors group-hover:text-white">
+                  <span className="relative text-sm font-medium  text-black transition-colors group-hover:text-white">
                     Add Item
                   </span>
                 </a>

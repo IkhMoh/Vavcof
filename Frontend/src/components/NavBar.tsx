@@ -5,8 +5,11 @@ import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
-
-const NavBar = () => {
+type Props = {
+  params: any;
+};
+const NavBar = ({ params }: Props) => {
+  console.log(params + "catehhhhhhhhhhhhhhhhhhhhgory");
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,18 +58,43 @@ const NavBar = () => {
 
           {/* Desktop Nav */}
           <nav aria-label="Global" className="hidden md:block">
-            <ul className="flex items-center gap-6 text-sm font-medium">
+            <ul className="flex  gap-4 text-sm font-medium">
               <li>
-                <a className="cursor-pointer">About Us</a>
+                <Link
+                  href={"/AboutUs"}
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About Us
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href={"/Menu"}
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Menu
+                </Link>
               </li>
               <li>
-                <a className="cursor-pointer">Menu</a>
+                <Link
+                  href={"/Shop"}
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Shop
+                </Link>
               </li>
               <li>
-                <a className="cursor-pointer">Shop</a>
-              </li>
-              <li>
-                <a className="cursor-pointer">Contact Us</a>
+                <Link
+                  href={"/ContactUs"}
+                  className="cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </nav>
@@ -105,12 +133,13 @@ const NavBar = () => {
               </li>
 
               <li>
-                <a
+                <Link
+                  href={"/menu"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
                   Menu
-                </a>
+                </Link>
               </li>
               <li>
                 <a
