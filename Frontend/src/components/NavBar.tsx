@@ -71,7 +71,7 @@ const NavBar = ({ params }: Props) => {
 
               <li>
                 <Link
-                  href={"/Menu"}
+                  href={"/menu"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
