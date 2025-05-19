@@ -21,7 +21,7 @@ const page = async () => {
     return product.category === "Breakfast";
   });
 
-  return (
+  return ( 
     <div className="  w-full h-fit">
       <div className="pl-2 md:pl-12 pt-1 md:pt-4">
         <Link href="/">
