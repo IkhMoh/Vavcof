@@ -7,7 +7,7 @@ async function page({ params }: { params: Params }) {
   const { category } = await params;
   
   return (
-    <div className="lg:grid lg:grid-cols-4  lg:gap-3 w-full bg-[#EAE4D5] min-h-9/12 overflow-y-auto">
+    <div className="lg:grid lg:grid-cols-4  lg:gap-3 w-full bg-[#F7F7F7] min-h-9/12 overflow-y-auto">
       <div className="lg:col-span-12 mt-2 ">
         <Workspace category={category} />
       </div>

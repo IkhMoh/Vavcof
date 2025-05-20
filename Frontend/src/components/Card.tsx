@@ -18,7 +18,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
   const rest = priceStr.slice(1);
   return (
     <div>
-      <div className="block  rounded-md shadow-xs shadow-indigo-100 bg-gray-50 w-fit transition-all ">
+      <div className="block  rounded-md shadow-xs shadow-indigo-100 bg-[#FBFBFB] w-fit transition-all ">
         <Link href={"/products/" + params.category + "/" + params.id}>
           <div className="relative w-[265px] h-[290px]  overflow-hidden">
             {" "}
