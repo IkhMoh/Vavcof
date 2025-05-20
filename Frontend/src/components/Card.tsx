@@ -18,60 +18,59 @@ function Card({ image, price, title, rating, params }: CardProps) {
   const rest = priceStr.slice(1);
   return (
     <div>
-      <Link
-        href={"/products/" + params.category + "/" + params.id}
-        className="block  rounded-md shadow-xs shadow-indigo-100 bg-gray-50 w-fit transition-all "
-      >
-        <div className="relative w-[265px] h-[290px]  overflow-hidden">
-          {" "}
-          <Image
-            alt=""
-            src={
-              image
-                ? image[0].url
-                : "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            }
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <div className="mt-1 w-full min-h-28 p-0.5 lg:p-1">
-          <dl>
+      <div className="block  rounded-md shadow-xs shadow-indigo-100 bg-gray-50 w-fit transition-all ">
+        <Link href={"/products/" + params.category + "/" + params.id}>
+          <div className="relative w-[265px] h-[290px]  overflow-hidden">
+            {" "}
+            <Image
+              alt=""
+              src={
+                image
+                  ? image[0].url
+                  : "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              }
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="mt-1 w-full p-0.5 lg:p-1 ">
             <div>
               <dt className="sr-only">Address</dt>
               <dd className="font-medium">{title}</dd>
             </div>
-            <div className="flex items-end justify-between mt-2 ">
-              <div>
-                <div className="flex gap-2 items-center">
-                  <h1 className="text-md font-bold">Rating:</h1>
-                  <h1 className="text-lg font-bold">{rating}⭐</h1>
-                </div>
-                <div>
-                  <dt className="sr-only">Price</dt>
-                  <dd className="text-md ">
-                    $<span className="text-3xl ">{firstDigit}</span>
-                    {rest}
-                  </dd>
-                </div>
-              </div>
-              <div className=" flex items-center justify-center ">
-                <a
-                  className="group relative inline-block overflow-hidden border border-black px-3 py-0.5 rounded-sm focus:ring-3 focus:outline-hidden"
-                  href="#"
-                >
-                  <span className="absolute inset-y-0 left-0 w-[0px] bg-black transition-all group-hover:w-full"></span>
 
-                  <span className="relative text-sm font-medium  text-black transition-colors group-hover:text-white">
-                    Add Item
-                  </span>
-                </a>
+            <div className="flex gap-2 items-center mt-2">
+              <h1 className="text-md font-bold">Rating:</h1>
+              <h1 className="text-lg font-bold">{rating}⭐</h1>
+            </div>
+          </div>
+        </Link>
+        <div className="mt-1 w-full p-0.5 lg:p-1 ">
+          <div className="flex items-end justify-between mt-2  ">
+            <div>
+              <div>
+                <dt className="sr-only">Price</dt>
+                <dd className="text-md ">
+                  $<span className="text-3xl ">{firstDigit}</span>
+                  {rest}
+                </dd>
               </div>
             </div>
-          </dl>
+            <div className=" flex items-center justify-center ">
+              <a
+                className="group relative inline-block overflow-hidden border border-black px-3 py-0.5 rounded-sm focus:ring-3 focus:outline-hidden"
+                href="#"
+              >
+                <span className="absolute inset-y-0 left-0 w-[0px] bg-black transition-all group-hover:w-full"></span>
+
+                <span className="relative text-sm font-medium  text-black transition-colors group-hover:text-white">
+                  Add Item
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

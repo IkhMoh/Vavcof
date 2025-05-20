@@ -5,11 +5,8 @@ import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
-type Props = {
-  params: any;
-};
-const NavBar = ({ params }: Props) => {
-  console.log(params + "catehhhhhhhhhhhhhhhhhhhhgory");
+
+const NavBar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +33,7 @@ const NavBar = ({ params }: Props) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full bg-orange-100 shadow transition-transform duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full bg-[#F2F2F2] shadow transition-transform duration-300 z-50 ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -61,7 +58,7 @@ const NavBar = ({ params }: Props) => {
             <ul className="flex  gap-4 text-sm font-medium">
               <li>
                 <Link
-                  href={"/AboutUs"}
+                  href={"/"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -80,7 +77,7 @@ const NavBar = ({ params }: Props) => {
               </li>
               <li>
                 <Link
-                  href={"/Shop"}
+                  href={"/products/All"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -89,7 +86,7 @@ const NavBar = ({ params }: Props) => {
               </li>
               <li>
                 <Link
-                  href={"/ContactUs"}
+                  href={"/"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -142,12 +139,13 @@ const NavBar = ({ params }: Props) => {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
+                  href={"/products/All"}
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
                   Shop
-                </a>
+                </Link>
               </li>
               <li>
                 <a

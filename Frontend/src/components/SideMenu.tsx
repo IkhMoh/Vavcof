@@ -5,7 +5,7 @@ type Props = {
 };
 const SideMenu = ({ category }: Props) => {
   return (
-    <section>
+    <section className="h-full">
       {/* mobil */}
       <div className="relative md:hidden ">
         <details className="[&_summary::-webkit-details-marker]:hidden">
@@ -151,9 +151,9 @@ const SideMenu = ({ category }: Props) => {
       </div>
 
       {/*pc */}
-      <div className="hidden md:block">
-        <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
-          <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-white shadow-lg">
+      <div className="hidden md:block h-full">
+        <div className=" space-y-2 rounded-br-md h-full  shadow-lg">
+          <div className=" space-y-2 rounded-br-md h-full bg-white shadow-lg">
             <ul className="flex flex-col space-y-2 mb-20 p-0.5 lg:p-2">
               <li>
                 <strong className="block text-lg font-medium text-gray-600 ">
