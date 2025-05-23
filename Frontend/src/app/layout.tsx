@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "next-themes";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -25,15 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased bg-[#F7F7F7]`}>
-        {/* ${geistSans.variable} ${geistMono.variable} */}
-        <div className="">
-          <NavBar />
-          <div className="pt-16"></div>
-          {children}
+      <body className={` antialiased bg-[#F7F7F7] dark:bg-sky-400`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          {/* ${geistSans.variable} ${geistMono.variable} */}
+          <div className="">
+            <NavBar />
+            <div className="pt-16"></div>
+            {children}
 
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

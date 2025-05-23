@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
 
 const NavBar = () => {
   const [show, setShow] = useState(true);
@@ -100,7 +101,7 @@ const NavBar = () => {
           <div className="flex items-center gap-4">
             <FaSearch className="w-5 h-5 cursor-pointer" />
             <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
-
+            <ThemeToggle />
             {/* Mobile Menu Toggle */}
             <button
               className="block md:hidden"
