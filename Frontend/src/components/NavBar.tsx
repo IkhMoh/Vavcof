@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full bg-[#F7F7F7] shadow transition-transform duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full bg-[#F7F7F7] dark:bg-[#222222] shadow transition-transform duration-300 z-50 ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
