@@ -11,8 +11,8 @@ export function ThemeToggle() {
       className="relative w-6 h-6 cursor-pointer"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      <FaSun className="absolute w-full h-full text-yellow-300   transition-all duration-300 scale-100 dark:scale-0" />
-      <FaMoon className="absolute w-full h-full text-white  transition-all duration-300 scale-0 dark:scale-100" />
+      <FaSun className="absolute p-1 w-fit h-full text-yellow-300   transition-all duration-300 scale-100 dark:scale-0" />
+      <FaMoon className="absolute p-1 w-fit h-full text-white  transition-all duration-300 scale-0 dark:scale-100" />
     </div>
   );
 }
