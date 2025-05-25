@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)]  lg:grid lg:grid-cols-5 ">
+    <footer className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  lg:grid lg:grid-cols-5 ">
       <div className="relative block h-12 lg:col-span-2 lg:h-full">
         <Image
           src="/bar-concept.jpg"

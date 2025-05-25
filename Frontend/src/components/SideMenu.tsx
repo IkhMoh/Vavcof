@@ -9,7 +9,7 @@ const SideMenu = ({ category }: Props) => {
       {/* mobil */}
       <div className="relative md:hidden ">
         <details className="[&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer w-full  items-center justify-center gap-2 border-b  border-gray-400 pb-1 bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)]  transition hover:border-gray-600">
+          <summary className="flex cursor-pointer w-full  items-center justify-center gap-2 border-b  border-gray-400 pb-1 bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300   hover:border-gray-600">
             <span className="text-sm font-medium  py-1 px-2"> Category </span>
             <span className="transition group-open:-rotate-180">
               <svg
@@ -31,7 +31,7 @@ const SideMenu = ({ category }: Props) => {
 
           <div className="z-50 mt-2 ltr:start-0 w-1/2">
             <div className="flex flex-col space-y-2 h-fit rounded-br-md  shadow-lg">
-              <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)]  shadow-lg">
+              <div className="flex flex-col space-y-2 h-fit rounded-br-md bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  shadow-lg">
                 <ul className="flex flex-col space-y-2 mb-20 p-0.5 lg:p-2">
                   <li>
                     <strong className="block text-lg font-medium  ">
@@ -153,7 +153,7 @@ const SideMenu = ({ category }: Props) => {
       {/*pc */}
       <div className="hidden md:block h-full">
         <div className=" space-y-2 rounded-br-md h-full  shadow-lg">
-          <div className=" space-y-2 rounded-br-md h-full bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)]  shadow-lg">
+          <div className=" space-y-2 rounded-br-md h-full bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  shadow-lg">
             <ul className="flex flex-col space-y-2 mb-20 p-0.5 lg:p-2">
               <li>
                 <strong className="block text-lg font-medium    ">

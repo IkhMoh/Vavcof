@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <Categorysection />
       <Allproducts />
-      <Categorysection />
+      <Category2section />
       <Contact/>
     </main>
   );

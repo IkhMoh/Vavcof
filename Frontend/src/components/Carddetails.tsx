@@ -11,7 +11,7 @@ const Carddetails = ({ details }: { details: Props }) => {
   const { image, title, description, price, rating } = details;
   console.log(details);
   return (
-    <div className="w-full h-full bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] ">
+    <div className="w-full h-full bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300 ">
       <div className="md:flex h-full p-2">
         <div className="h-full flex md:flex-col ">
           <div className="relative w-[310px] md:w-[340px] h-[270px] md:h-[370px] rounded-xl ">
