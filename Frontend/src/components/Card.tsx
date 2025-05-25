@@ -18,7 +18,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
   const rest = priceStr.slice(1);
   return (
     <div>
-      <div className="block  rounded-md shadow-xs shadow-indigo-100 bg-[#FBFBFB] w-fit transition-all ">
+      <div className="block  rounded-md shadow-xs bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)]  w-fit transition-all ">
         <Link href={"/products/" + params.category + "/" + params.id}>
           <div className="relative w-[265px] h-[290px]  overflow-hidden">
             {" "}
@@ -45,7 +45,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
             </div>
           </div>
         </Link>
-        <div className="mt-1 w-full p-0.5 lg:p-1 ">
+        <div className="mt-1 w-full p-0.5 lg:p-2 ">
           <div className="flex items-end justify-between mt-2  ">
             <div>
               <div>
@@ -58,12 +58,12 @@ function Card({ image, price, title, rating, params }: CardProps) {
             </div>
             <div className=" flex items-center justify-center ">
               <a
-                className="group relative inline-block overflow-hidden border border-black px-3 py-0.5 rounded-sm focus:ring-3 focus:outline-hidden"
+                className="group relative inline-block overflow-hidden   bg-[#A67853] text-[var(--Light)]  px-3 py-0.5 rounded-sm focus:ring-3 focus:outline-hidden"
                 href="#"
               >
-                <span className="absolute inset-y-0 left-0 w-[0px] bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute inset-y-0 left-0 w-[0px] bg-[var(--pAccent)] transition-all group-hover:w-full"></span>
 
-                <span className="relative text-sm font-medium  text-black transition-colors group-hover:text-white">
+                <span className="relative text-sm font-medium  transition-colors text-white dark:text-[var(--Dark)]">
                   Add Item
                 </span>
               </a>

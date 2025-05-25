@@ -25,7 +25,7 @@ const page = async () => {
     <div className="w-full h-fit">
       <div className="pl-2 md:pl-12 pt-1 md:pt-4">
         <Link href="/">
-        <div className="h-fit w-fit p-3 rounded-full bg-gray-300 ">
+        <div className="h-fit w-fit p-3 rounded-full bg-gray-400 ">
           <IoArrowBackOutline className="h-7 w-7" />
         </div>
         </Link>
@@ -44,7 +44,7 @@ const page = async () => {
                 return (
                   <div
                     key={product.id}
-                    className="flex justify-between px-0.5 md:px-2 bg-stone-200 rounded-md "
+                    className="flex justify-between px-0.5 md:px-2 bg-gray-400 rounded-md "
                  >
                     <p className="text-md md:text-2xl">{product.title}</p>
                     <p className="text-md md:text-2xl">{product.price}$</p>
@@ -60,7 +60,7 @@ const page = async () => {
                 return (
                   <div
                     key={product.id}
-                    className="flex justify-between px-0.5 md:px-2 bg-stone-200 rounded-md "
+                    className="flex justify-between px-0.5 md:px-2 bg-gray-400 rounded-md "
                  >
                     <p className="text-md md:text-2xl">{product.title}</p>
                     <p className="text-md md:text-2xl">{product.price}$</p>
@@ -76,7 +76,7 @@ const page = async () => {
                 return (
                   <div
                     key={product.id}
-                    className="flex justify-between px-0.5 md:px-2 bg-stone-200 rounded-md "
+                    className="flex justify-between px-0.5 md:px-2 bg-gray-400 rounded-md "
                  >
                     <p className="text-md md:text-2xl">{product.title}</p>
                     <p className="text-md md:text-2xl">{product.price}$</p>
@@ -99,7 +99,7 @@ const page = async () => {
                 return (
                   <div
                     key={product.id}
-                    className="flex justify-between px-0.5 md:px-2 bg-stone-200 rounded-md "
+                    className="flex justify-between px-0.5 md:px-2 bg-gray-400 rounded-md "
                  >
                     <p className="text-md md:text-2xl">{product.title}</p>
                     <p className="text-md md:text-2xl">{product.price}$</p>
@@ -115,7 +115,7 @@ const page = async () => {
                 return (
                   <div
                     key={product.id}
-                    className="flex justify-between px-0.5 md:px-2 bg-stone-200 rounded-md "
+                    className="flex justify-between px-0.5 md:px-2 bg-gray-400 rounded-md "
                  >
                     <p className="text-md md:text-2xl">{product.title}</p>
                     <p className="text-md md:text-2xl">{product.price}$</p>

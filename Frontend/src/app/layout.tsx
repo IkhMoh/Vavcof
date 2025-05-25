@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased bg-[#F7F7F7] dark:bg-sky-400`}>
+      <body
+        className={` antialiased bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] `}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

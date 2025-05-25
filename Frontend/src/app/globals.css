@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+:root {
+  /* Light Mode */
+  --Light: #F2F2F2; /* خلفية الموقع */
+  --Dark: #2C2C2C; /* النصوص الأساسية */
+  --pAccent: #6f4e37; /* البني المستخدم في الأزرار أو التمييز */
+}
+ /* --Light: #efe6dd;  */
