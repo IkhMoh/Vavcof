@@ -1,23 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-async function Categorycard({
+async function Category2card({
   image,
   category,
 }: {
   image: string;
   category: string;
 }) {
-  console.log(image + " " + category);
+ 
   if (!image || !category) {
     return null; // Return null if image or category is not provided
   }
-if(category === "HotCoffee") {
-  category = "Hot Coffee";
 
-}else if(category === "IcedCoffee") {
-  category = "Iced Coffee";
-}
   return (
     <Link href={"/products/" + category}>
       <div className="group relative block bg-black">
@@ -51,4 +46,4 @@ if(category === "HotCoffee") {
   );
 }
 
-export default Categorycard;
+export default Category2card;
