@@ -1,5 +1,6 @@
 import React from "react";
 import Category2card from "./Category2card";
+
 async function Category2section() {
   const res = await fetch("http://localhost:1337/api/categories?populate=*");
   const data = await res.json();

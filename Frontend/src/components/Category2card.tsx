@@ -5,10 +5,9 @@ async function Category2card({
   image,
   category,
 }: {
-  image: string;
-  category: string;
+  image?: string;
+  category?: string;
 }) {
- 
   if (!image || !category) {
     return null; // Return null if image or category is not provided
   }
