@@ -11,7 +11,12 @@ async function Category2card({
   if (!image || !category) {
     return null; // Return null if image or category is not provided
   }
-
+  if (category === "Hot Coffee") {
+    category = "HotCoffee";
+  } else if (category === "Iced Coffee") {
+    category = "IcedCoffee";
+  }
+  console.log(category)
   return (
     <Link href={"/products/" + category}>
       <div className="group relative block bg-black">

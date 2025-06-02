@@ -10,17 +10,16 @@ async function Categorycard({
 }) {
   console.log(image + " " + category);
   if (!image || !category) {
-    return null; // Return null if image or category is not provided
+    return null;  
   }
-if(category === "HotCoffee") {
-  category = "Hot Coffee";
-
-}else if(category === "IcedCoffee") {
-  category = "Iced Coffee";
-}
+  if (category === "Hot Coffee") {
+    category = "HotCoffee";
+  } else if (category === "Iced Coffee") {
+    category = "IcedCoffee";
+  }
   return (
     <Link href={"/products/" + category}>
-      <div className="group relative block bg-black">
+      <div className="group relative block bg-black ">
         <Image
           width={250}
           height={250}
@@ -33,7 +32,7 @@ if(category === "HotCoffee") {
           <p className="text-sm font-medium tracking-widest "></p>
 
           <p className="text-xl font-bold sm:text-2xl text-[var(--pAccent)] ">
-            {category}
+            {category === "HotCoffee" ? "Hot Coffee" : category === "IcedCoffee" ? "Iced Coffee" : category}
           </p>
 
           <div className="mt-32 sm:mt-48 lg:mt-64">
