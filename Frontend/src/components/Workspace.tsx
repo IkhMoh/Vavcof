@@ -20,8 +20,8 @@ async function Workspace({ category }: { category: string }) {
           ? "Hot Coffee "
           : category === "IcedCoffee"
           ? "Iced Coffee "
-          : category} 
-         Menu
+          : category}{" "}
+        Menu
       </h1>
       <div className="flex flex-col items-center w-full h-screen dark:bg-[#222222] ">
         <ul className="grid gap-2 sm:grid-cols-2  lg:grid-cols-4  justify-center justify-items-center w-full py-4 overflow-y-auto">

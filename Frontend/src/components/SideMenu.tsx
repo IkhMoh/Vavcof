@@ -127,18 +127,18 @@ const SideMenu = ({ category }: Props) => {
                       <li>
                         <Link
                           href="#"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium     hover:bg-gray-100 hover:  "
+                          className="block rounded-lg px-4 py-2 text-sm font-medium       "
                         >
-                          Update
+                          Arabica
                         </Link>
                       </li>
 
                       <li>
                         <Link
                           href="#"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium     hover:bg-gray-100 "
+                          className="block rounded-lg px-4 py-2 text-sm font-medium       "
                         >
-                          Help
+                          Robusta
                         </Link>
                       </li>
                     </ul>
@@ -249,7 +249,7 @@ const SideMenu = ({ category }: Props) => {
                   <li>
                     <Link
                       href="#"
-                      className="block rounded-lg px-4 py-2 text-sm font-medium      hover:bg-gray-100 "
+                      className="block rounded-lg px-4 py-2 text-sm font-medium "
                     >
                       Arabica
                     </Link>
@@ -258,7 +258,7 @@ const SideMenu = ({ category }: Props) => {
                   <li>
                     <Link
                       href="#"
-                      className="block rounded-lg px-4 py-2 text-sm font-medium      hover:bg-gray-100 "
+                      className="block rounded-lg px-4 py-2 text-sm font-medium "
                     >
                       Robusta
                     </Link>
