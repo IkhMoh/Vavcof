@@ -76,7 +76,20 @@ const SideMenu = ({ category }: Props) => {
                           Drinks
                         </Link>
                       </li> 
- 
+
+                      <li>
+                        <Link
+                          href={"/products/Desserts"}
+                          className={
+                            category === "Desserts"
+                              ? "block rounded-lg transition-all bg-gray-400 px-4 py-2 text-sm font-medium   "
+                              : "block rounded-lg transition-all  px-4 py-2 text-sm font-medium   "
+                          }
+                        >
+                          Desserts
+                        </Link>
+                      </li> 
+
                       <li>
                         <Link
                           href={"/products/IcedCoffee"}
