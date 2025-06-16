@@ -3,8 +3,13 @@ import Category2section from "@/components/Category2section";
 import Categorysection from "@/components/Categorysection";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-export default function Home() {
-  return (
+import { CgLayoutGrid } from "react-icons/cg";
+export default async function Home() {
+  const res = await fetch("http://localhost:1337/api/photos?populate=*");
+  const data = await res.json();
+  console.log(data);
+console.log("hhhhhhhhhhhhhh")
+return(
     <main className="">
       <Hero />
       <Categorysection />
@@ -14,4 +19,3 @@ export default function Home() {
     </main>
   );
 }
- 

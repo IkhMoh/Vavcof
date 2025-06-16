@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 function Hero() {
+  
   return (
     <section className="bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  ">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 ">
