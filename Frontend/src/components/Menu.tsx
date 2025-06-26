@@ -3,7 +3,11 @@ import React from "react";
 import { IoArrowBackOutline } from "react-icons/io5";
 
 const page = async () => {
-  const res = await fetch("http://localhost:1337/api/products?populate=*");
+  const res = await fetch("http://localhost:1337/api/products?populate=*",{
+    next: {
+      revalidate: 120,
+    },
+  });
   const data = await res.json();
   const Desserts = data.data.filter((product: any) => {
     return product.category === "Desserts";

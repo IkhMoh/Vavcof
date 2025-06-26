@@ -8,7 +8,7 @@ async function Categorycard({
   image: string;
   category: string;
 }) {
-  console.log(image + " " + category);
+  
   if (!image || !category) {
     return null;
   }

@@ -2,13 +2,18 @@ import React from "react";
 import Card from "./Card";
 
 async function Workspace({ category }: { category: string }) {
-  const res = await fetch("http://localhost:1337/api/products?populate=*");
+  const res = await fetch("http://localhost:1337/api/products?populate=*", {
+    next: {
+      revalidate: 120,
+    },
+  });
   const data = await res.json();
-  let dede = [];
+  console.log(data);
+  let finalData = [];
   if (category === "All") {
-    dede = data.data;
+    finalData = data.data;
   } else {
-    dede = data.data.filter((product: any) => {
+    finalData = data.data.filter((product: any) => {
       return product.category === category;
     });
   }
@@ -25,7 +30,7 @@ async function Workspace({ category }: { category: string }) {
       </h1>
       <div className="flex flex-col items-center w-full h-screen dark:bg-[#222222] ">
         <ul className="grid gap-2 sm:grid-cols-2  lg:grid-cols-4  justify-center justify-items-center w-full py-4 overflow-y-auto">
-          {dede.map((product: any) => {
+          {finalData.map((product: any) => {
             const images = product.image;
 
             return (

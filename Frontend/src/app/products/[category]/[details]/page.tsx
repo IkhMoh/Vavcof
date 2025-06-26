@@ -7,7 +7,12 @@ type Params = {
 async function page({ params }: { params: Params }) {
   const { details } = params;
   const res = await fetch(
-    `http://localhost:1337/api/products?filters[id][$eq]=${details}&populate=*`
+    `http://localhost:1337/api/products?filters[id][$eq]=${details}&populate=*`,
+    {
+      next: {
+        revalidate: 120,
+      },
+    }
   );
 
   const data = await res.json();
