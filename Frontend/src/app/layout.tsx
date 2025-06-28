@@ -38,7 +38,7 @@ export default async function RootLayout({
       <body
         className={` antialiased bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300 `}
       >
-        <Providers data={data}>
+        <Providers data={data.data}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
