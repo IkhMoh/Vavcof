@@ -1,12 +1,16 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import Image from "next/image";
+import { PhotosContext } from "@/contexts/photos";
 const Footer = () => {
+  const photos = useContext(PhotosContext);
+  console.log(photos);
   return (
     <footer className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  lg:grid lg:grid-cols-5 ">
       <div className="relative block h-12 lg:col-span-2 lg:h-full">
         <Image
           src="/bar-concept.jpg"
-          alt="image for store"
+          alt={photos[1].place}
           width={500}
           height={500}
           className="absolute inset-0 h-full w-full object-cover"
