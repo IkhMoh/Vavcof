@@ -13,15 +13,15 @@ function Allproducts() {
     <div className="my-20">
       <div className="">
         <section
-        // className={`overflow-hidden bg-[url(${image})] h-96 bg-cover bg-top bg-no-repeat`}
+        className={`overflow-hidden bg-[url(${image})] h-96 bg-cover bg-top bg-no-repeat`}
         >
-          <Image
+          {/* <Image
             src={photos[2].image[0].url}
             alt={photos[2].place}
             width={1300}
             height={300}
             className="rounded"
-          />
+          /> */}
           <div className="bg-black/50 p-8 md:p-12 lg:px-16 lg:py-24">
             <div className="text-center ltr:sm:text-left rtl:sm:text-right">
               <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-5xl">
