@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 1500,
   className,
 }: {
   words: string[];
@@ -57,7 +57,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={twMerge(
-          "z-10 inline-block relative text-left  px-2",
+          "z-10 inline-block relative text-left",
           className
         )}
         key={currentWord}

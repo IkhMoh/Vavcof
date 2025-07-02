@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 async function Categorycard({
   image,
   category,
@@ -8,7 +12,6 @@ async function Categorycard({
   image: string;
   category: string;
 }) {
-  
   if (!image || !category) {
     return null;
   }
@@ -19,7 +22,12 @@ async function Categorycard({
   }
   return (
     <Link href={"/products/" + category} className="">
-      <div className="group relative block bg-black w-[250px] h-[374px] ">
+      <motion.div
+        className="group relative block bg-black w-[250px] h-[374px] "
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1 }}
+      >
         {" "}
         <Image
           width={250}
@@ -39,17 +47,9 @@ async function Categorycard({
               : category}
           </p>
 
-          {/* <div className="mt-32 sm:mt-48 lg:mt-64">
-            <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-              <p className="text-sm text-white">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-                perferendis hic asperiores quibusdam quidem voluptates
-                doloremque reiciendis nostrum harum. Repudiandae?
-              </p>
-            </div>
-          </div> */}
+         
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }

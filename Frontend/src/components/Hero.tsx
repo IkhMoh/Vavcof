@@ -2,14 +2,20 @@
 import React, { useContext } from "react";
 import Image from "next/image";
 import { PhotosContext } from "@/contexts/photos";
-
+import { FlipWords } from "./flip-words";
+import { motion } from "framer-motion"; 
 function Hero() {
   const photos = useContext(PhotosContext);
   return (
     <section className="bg-[var(--Light)]  text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  ">
       <div className="mx-auto w-full  px-4 py-8 sm:px-6 lg:px-8 ">
         <div className="md:flex md:justify-between">
-          <div className="md:col-span-3 ">
+          <motion.div
+            className="md:col-span-3 "
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1 }}
+          >
             <Image
               src={photos[0].image[0].url}
               alt={photos[0].place}
@@ -17,18 +23,36 @@ function Hero() {
               height={1300}
               className="rounded"
             />
-          </div>
+          </motion.div>
           <div className=" md:col-span-2 flex  flex-col justify-center space-y-4">
             <div className="max-w-lg md:max-w-none ml-4 ">
-              <h2 className="text-2xl font-semibold sm:text-3xl">
-                Discover the True Taste of Coffee at VavCof
-              </h2>
+              <motion.h2
+                className="text-2xl font-semibold sm:text-3xl"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5 }}
+              >
+                Discover the True Taste of{" "}
+                <span>
+                  <FlipWords
+                    words={["Drinks", "coffee", "Breakfast"]}
+                    className="text-[var(--pAccent)] text-5xl font-bold 
+                   "
+                  />
+                </span>
+                at VavCof
+              </motion.h2>
 
-              <p className="mt-4 text-xl ">
+              <motion.p
+                className="mt-4 text-xl "
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 2 }}
+              >
                 Welcome to VavCof – Where your coffee story begins! Enjoy the
                 finest coffee and drinks in a cozy atmosphere with exceptional
                 service that makes every visit unforgettable.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>

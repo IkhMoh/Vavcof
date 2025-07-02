@@ -41,7 +41,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
 
             <div className="flex gap-2 items-center mt-2">
               <h1 className="text-md font-bold">Rating:</h1>
-              <h1 className="text-lg font-bold">{rating}⭐</h1>
+              <h1 className="text-lg font-bold">{rating} ⭐</h1>
             </div>
           </div>
         </Link>
