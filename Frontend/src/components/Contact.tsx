@@ -33,7 +33,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-[var(--pAccent)] px-5 py-3  transition focus:ring-3 focus:ring-[var(--pAccent)] focus:outline-hidden sm:mt-0 sm:w-auto"
+                className="group mt-4 text-white flex w-full items-center justify-center gap-2 rounded-md bg-[var(--pAccent)] px-5 py-3  transition focus:ring-3 focus:ring-[var(--pAccent)] focus:outline-hidden sm:mt-0 sm:w-auto"
               >
                 <span className="text-sm font-medium"> Sign Up </span>
 

@@ -22,7 +22,6 @@ async function Categorysection() {
           })}
         </ul>
       </div>
-      s
     </section>
   );
 }
