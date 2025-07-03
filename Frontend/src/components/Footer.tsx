@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  lg:grid lg:grid-cols-5 ">
       <div className="relative block h-12 lg:col-span-2 lg:h-full">
         <Image
-          src={photos[1].image[0].url}
-          alt={photos[1].place}
+          src={photos[0].image[0].url}
+          alt={photos[0].place}
           width={500}
           height={500}
           className="absolute inset-0 h-full w-full object-cover"

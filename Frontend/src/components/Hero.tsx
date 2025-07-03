@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import { PhotosContext } from "@/contexts/photos";
 import { FlipWords } from "./flip-words";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
+import { ImagesSlider } from "./images-slider";
 function Hero() {
   const photos = useContext(PhotosContext);
   return (
@@ -11,18 +12,32 @@ function Hero() {
       <div className="mx-auto w-full  px-4 py-8 sm:px-6 lg:px-8 ">
         <div className="md:flex md:justify-between">
           <motion.div
-            className="md:col-span-3 "
+            className="md:col-span-3 h-full w-full "
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1 }}
           >
-            <Image
+            {/* <Image
               src={photos[0].image[0].url}
               alt={photos[0].place}
               width={1300}
               height={1300}
               className="rounded"
-            />
+            /> */}
+            <ImagesSlider
+              images={photos[2].image.map((image: any) => image.url)}
+              autoplay={true}
+              direction="up"
+              className="rounded-lg"
+            >
+              <Image
+                src={photos[2].image[0].url}
+                alt={photos[2].place}
+                width={1300}
+                height={1300}
+                className=""
+              />
+            </ImagesSlider>
           </motion.div>
           <div className=" md:col-span-2 flex  flex-col justify-center space-y-4">
             <div className="max-w-lg md:max-w-none ml-4 ">
