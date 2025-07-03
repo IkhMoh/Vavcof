@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-async function Categorycard({
+function Categorycard({
   image,
   category,
 }: {
@@ -26,7 +26,7 @@ async function Categorycard({
         className="group relative block bg-black w-[250px] h-[374px] "
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 2.2 }}
       >
         {" "}
         <Image
@@ -46,8 +46,6 @@ async function Categorycard({
               ? "Iced Coffee"
               : category}
           </p>
-
-         
         </div>
       </motion.div>
     </Link>
