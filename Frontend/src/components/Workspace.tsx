@@ -11,13 +11,15 @@ async function Workspace({ category }: { category: string }) {
   console.log(data);
   let finalData = [];
   if (category === "All") {
-    finalData = data.data;
+    finalData = data.data.filter((product: any) => {
+      return product.category !== "Arabica" && product.category !== "Robusta";
+    });
   } else {
     finalData = data.data.filter((product: any) => {
       return product.category === category;
     });
   }
-
+  console.log(finalData);
   return (
     <>
       <h1 className="text-2xl font-bold pl-4  shadow-2xl rounded-xl">
