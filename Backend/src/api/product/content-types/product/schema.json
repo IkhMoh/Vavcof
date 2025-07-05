@@ -41,7 +41,9 @@
         "Drinks",
         "Desserts",
         "IcedCoffee",
-        "HotCoffee"
+        "HotCoffee",
+        "Robusta",
+        "Arabica"
       ],
       "required": true
     },

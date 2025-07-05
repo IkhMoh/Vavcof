@@ -1,6 +1,6 @@
 import React from "react";
-import Categorycard from "./Categorycard";
-async function Categorysection() {
+import CategoryCard from "./CategoryCard";
+async function CategorySection() {
   const res = await fetch("http://localhost:1337/api/categories?populate=*", {
     cache: "force-cache",
   });
@@ -13,7 +13,7 @@ async function Categorysection() {
           {data.data.map((data: any) => {
             const imageUrl = data.image.url;
             return (
-              <Categorycard
+              <CategoryCard
                 key={data.id}
                 image={imageUrl}
                 category={data.category}
@@ -26,4 +26,4 @@ async function Categorysection() {
   );
 }
 
-export default Categorysection;
+export default CategorySection;

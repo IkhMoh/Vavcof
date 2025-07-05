@@ -473,7 +473,15 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Breakfast', 'Drinks', 'Desserts', 'IcedCoffee', 'HotCoffee']
+      [
+        'Breakfast',
+        'Drinks',
+        'Desserts',
+        'IcedCoffee',
+        'HotCoffee',
+        'Robusta',
+        'Arabica',
+      ]
     > &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;

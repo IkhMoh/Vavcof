@@ -247,19 +247,25 @@ const SideMenu = ({ category }: Props) => {
 
                 <ul className="mt-2 space-y-1">
                   <li>
-                    <Link
-                      href="#"
-                      className="block rounded-lg px-4 py-2 text-sm font-medium "
-                    >
+                  <Link
+                      href={"/products/Arabica"}
+                      className={
+                        category === "Arabica"
+                          ? "block rounded-lg  transition-all bg-gray-400 px-4 py-2 text-sm font-medium text-gray "
+                          : "block rounded-lg transition-all  px-4 py-2 text-sm font-medium text-gray "
+                      }                    >
                       Arabica
                     </Link>
                   </li>
 
                   <li>
-                    <Link
-                      href="#"
-                      className="block rounded-lg px-4 py-2 text-sm font-medium "
-                    >
+                  <Link
+                      href={"/products/Robusta"}
+                      className={
+                        category === "Robusta"
+                          ? "block rounded-lg  transition-all bg-gray-400 px-4 py-2 text-sm font-medium text-gray "
+                          : "block rounded-lg transition-all  px-4 py-2 text-sm font-medium text-gray "
+                      }                    >
                       Robusta
                     </Link>
                   </li>
