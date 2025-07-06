@@ -42,7 +42,7 @@ async function Workspace({ category }: { category: string }) {
                 price={product.price}
                 title={product.title}
                 rating={product.rating}
-                params={{
+                params={{ 
                   category: product.category,
                   id: product.id,
                 }}
