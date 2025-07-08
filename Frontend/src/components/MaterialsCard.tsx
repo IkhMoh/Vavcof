@@ -25,7 +25,7 @@ async function MaterialsCard({
         <div className="relative p-4 sm:p-6 lg:p-8">
           <p className="text-sm font-medium tracking-widest "></p>
 
-          <p className="text-xl font-bold sm:text-4xl text-white">
+          <p className="text-xl font-bold sm:text-4xl text-white capitalize">
             {category}
           </p>
 
