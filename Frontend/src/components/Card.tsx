@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 type CardProps = {
   image: { url: string }[];
   price: number;
@@ -16,13 +17,13 @@ function Card({ image, price, title, rating, params }: CardProps) {
   const priceStr = price.toString();
   const firstDigit = priceStr[0];
   const rest = priceStr.slice(1);
+
   return (
     <div>
       <div className="block  rounded-md shadow-xs bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  w-fit  ">
         <Link href={"/products/" + params.category + "/" + params.id}>
-          <div className="relative w-[265px] h-[290px]  overflow-hidden">
-            {" "}
-            <Image
+          <div className="relative   overflow-hidden">
+            {/* <Image
               alt=""
               src={
                 image
@@ -31,6 +32,18 @@ function Card({ image, price, title, rating, params }: CardProps) {
               }
               fill
               className="object-cover"
+            /> */}
+            <CldImage
+              src={
+                image
+                  ? image[0].url
+                  : "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              }
+              width="280"
+              height="340"
+              crop="thumb"
+              alt=""
+              sizes="100vw"
             />
           </div>
           <div className="mt-1 w-full p-0.5 lg:p-1 ">

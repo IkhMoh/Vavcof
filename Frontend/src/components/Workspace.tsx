@@ -6,9 +6,10 @@ async function Workspace({ category }: { category: string }) {
     // next: {
     //   revalidate: 120,
     // },
-    cache :"no-cache"
+    cache: "no-cache",
   });
   const data = await res.json();
+
   console.log(data);
   let finalData = [];
   if (category === "All") {
@@ -21,7 +22,7 @@ async function Workspace({ category }: { category: string }) {
     });
   }
   console.log(finalData);
-  const loadingCard = <div>Loading</div>;
+  const loadingCard = <div>Loading.....//./.</div>;
 
   return (
     <>
