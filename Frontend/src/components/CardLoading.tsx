@@ -17,18 +17,9 @@ const CardLoading = () => {
           </div>
         </div>
 
-        <div className="">
-          <div className="">
-            <div>
-              <div>
-                <Skeleton className="max-h-12 max-w-24" />
-              </div>
-            </div>
-            <div className=" ">
-              <Skeleton className="max-h-12 max-w-12" />
-            </div>
-          </div>
-        </div>
+        <Skeleton className="max-h-12 max-w-24" />
+
+        <Skeleton className="max-h-12 max-w-12" />
       </div>
     </div>
   );

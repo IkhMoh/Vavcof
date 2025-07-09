@@ -20,7 +20,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
 
   return (
     <div>
-      <div className="block border-1 border-gray-300 rounded-md shadow-xs bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  w-fit  ">
+      <div className="block border-1 dark:border-gray-600 border-gray-300 rounded-md shadow-xs bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  w-fit  ">
         <Link href={"/products/" + params.category + "/" + params.id}>
           <div className="relative   overflow-hidden">
             {/* <Image
