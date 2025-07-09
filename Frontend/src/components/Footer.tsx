@@ -4,7 +4,7 @@ import Image from "next/image";
 import { PhotosContext } from "@/contexts/photos";
 const Footer = () => {
   const photos = useContext(PhotosContext);
-   return (
+  return (
     <footer className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  lg:grid lg:grid-cols-5 ">
       <div className="relative block h-12 lg:col-span-2 lg:h-full">
         <Image
@@ -164,68 +164,59 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <p className="font-medium  ">Services</p>
+              <p className="font-semibold text-base text-gray-800">Services</p>
 
-              <ul className="mt-6 space-y-4 text-sm">
+              <ul className="mt-4 space-y-3 text-sm text-gray-600">
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    1on1 Coaching{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    1-on-1 Coaching
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    Company Review{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    Company Audit
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    Accounts Review{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    Accounts Review
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    HR Consulting{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    HR Consulting
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    SEO Optimisation{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    SEO Optimization
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="font-medium  ">Company</p>
+              <p className="font-semibold text-base text-gray-800">Company</p>
 
-              <ul className="mt-6 space-y-4 text-sm">
+              <ul className="mt-4 space-y-3 text-sm text-gray-600">
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    About{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    About Us
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    Meet the Team{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    Meet the Team
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="  transition hover:opacity-75">
-                    {" "}
-                    Accounts Review{" "}
+                  <a href="#" className="hover:opacity-75 transition">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:opacity-75 transition">
+                    Press
                   </a>
                 </li>
               </ul>

@@ -1,17 +1,26 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Card from "./Card";
-
 async function Workspace({ category }: { category: string }) {
-  const res = await fetch("http://localhost:1337/api/products?populate=*", {
-    // next: {
-    //   revalidate: 120,
-    // },
-    cache: "no-cache",
-  });
-  const data = await res.json();
+  await new Promise((res) => setTimeout(res, 2000)); 
+
+  // const res = await fetch("http://localhost:1337/api/products?populate=*", {
+  //   cache: "no-cache",
+  // });
+  
+    const res = await fetch("http://localhost:1337/api/products?populate=*", {
+      next: {
+        revalidate: 120,
+      },
+      // cache: "no-cache",
+    });
+    const data = await res.json();
+   
 
   console.log(data);
   let finalData = [];
+
+
+
   if (category === "All") {
     finalData = data.data.filter((product: any) => {
       return product.category !== "Arabica" && product.category !== "Robusta";
@@ -22,7 +31,6 @@ async function Workspace({ category }: { category: string }) {
     });
   }
   console.log(finalData);
-  const loadingCard = <div>Loading.....//./.</div>;
 
   return (
     <>
@@ -40,18 +48,17 @@ async function Workspace({ category }: { category: string }) {
             const images = product.image;
 
             return (
-              <Suspense key={product.id} fallback={loadingCard}>
-                <Card
-                  image={images}
-                  price={product.price}
-                  title={product.title}
-                  rating={product.rating}
-                  params={{
-                    category: product.category,
-                    id: product.id,
-                  }}
-                />
-              </Suspense>
+              <Card
+                key={product.id}
+                image={images}
+                price={product.price}
+                title={product.title}
+                rating={product.rating}
+                params={{
+                  category: product.category,
+                  id: product.id,
+                }}
+              />
             );
           })}
         </ul>
