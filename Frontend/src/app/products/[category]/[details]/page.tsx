@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Carddetails from "@/components/Carddetails";
 
 type Params = {
