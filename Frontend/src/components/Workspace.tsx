@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Card from "./Card";
 
 async function Workspace({ category }: { category: string }) {
   const res = await fetch("http://localhost:1337/api/products?populate=*", {
-    next: {
-      revalidate: 120,
-    },
+    // next: {
+    //   revalidate: 120,
+    // },
+    cache :"no-cache"
   });
   const data = await res.json();
   console.log(data);
@@ -20,6 +21,8 @@ async function Workspace({ category }: { category: string }) {
     });
   }
   console.log(finalData);
+  const loadingCard = <div>Loading</div>;
+
   return (
     <>
       <h1 className="text-2xl font-bold pl-4  shadow-2xl rounded-xl">
@@ -36,17 +39,18 @@ async function Workspace({ category }: { category: string }) {
             const images = product.image;
 
             return (
-              <Card
-                key={product.id}
-                image={images}
-                price={product.price}
-                title={product.title}
-                rating={product.rating}
-                params={{ 
-                  category: product.category,
-                  id: product.id,
-                }}
-              />
+              <Suspense key={product.id} fallback={loadingCard}>
+                <Card
+                  image={images}
+                  price={product.price}
+                  title={product.title}
+                  rating={product.rating}
+                  params={{
+                    category: product.category,
+                    id: product.id,
+                  }}
+                />
+              </Suspense>
             );
           })}
         </ul>

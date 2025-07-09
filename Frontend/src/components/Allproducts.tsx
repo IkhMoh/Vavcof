@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { PhotosContext } from "@/contexts/photos";
 import Image from "next/image";
 import { ImagesSlider } from "./images-slider";
+import { CldImage } from 'next-cloudinary';
+
 function Allproducts() {
   const photos = useContext(PhotosContext);
   const image = photos[1].image[0].url;
@@ -22,12 +24,21 @@ function Allproducts() {
             direction="up"
             className="absolute inset-0  object-cover opacity-50 transition-opacity group-hover:opacity-50	"
           >
-            <Image
+            {/* <Image
               src={photos[2].image[0].url}
               alt={photos[2].place}
               width={1300}
               height={200}
               className="h-[474px] w-full"
+            /> */}
+            <CldImage
+              src={photos[2].image[0].url}
+              alt={photos[2].place}
+              width="1400" //Original width 900
+              height="600"
+              crop="pad" // Returns the given size with padding
+              fillBackground
+              sizes="100vw"
             />
           </ImagesSlider>
           <div className="relative flex bg-black/500 p-8 md:p-12 lg:px-16 lg:py-24 z-50 justify-center items-center h-[594px]">
@@ -37,7 +48,7 @@ function Allproducts() {
                   href={"/products/All"}
                   className="inline-block rounded-full bg-[var(--pAccent)]/80 px-8 py-3 text-sm font-medium text-white transition hover:bg-[var(--pAccent)] focus:ring-3 focus:ring-[var(--pAccent)]/20 focus:outline-hidden"
                 >
-                 Order Now
+                  Order Now
                 </Link>
               </div>
             </div>
