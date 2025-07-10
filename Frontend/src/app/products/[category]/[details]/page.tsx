@@ -6,7 +6,7 @@ type Params = {
 };
 async function page({ params }: { params: Params }) {
   const { details } = params;
-  await new Promise((res) => setTimeout(res, 1000));
+  // await new Promise((res) => setTimeout(res, 1000));
 
   const res = await fetch(
     `http://localhost:1337/api/products?filters[id][$eq]=${details}&populate=*`,
