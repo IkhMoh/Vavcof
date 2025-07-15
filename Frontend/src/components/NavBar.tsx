@@ -6,11 +6,13 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
+import ShopCarts from "./ShopCarts";
 
 const NavBar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [shopOpen, setShopOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,7 +102,12 @@ const NavBar = () => {
           {/* Icons and Mobile Button */}
           <div className="flex items-center gap-4">
             <FaSearch className="w-5 h-5 cursor-pointer" />
-            <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
+            <button
+              onClick={() => setShopOpen(true)}
+              aria-label="Toggle Menu"
+            >
+              <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
+            </button>
             <ThemeToggle />
             {/* Mobile Menu Toggle */}
             <button
@@ -159,6 +166,8 @@ const NavBar = () => {
             </ul>
           </nav>
         )}
+        {/* Mobile shop Items */}
+        {shopOpen && <ShopCarts setShopOpen={setShopOpen} />}
       </div>
     </header>
   );

@@ -1,8 +1,12 @@
-import Card from "@/components/Card";
+import ShopMenu from "@/components/ShopMenu";
 import React from "react";
 
 const page = () => {
-  return <div className="bg-sky-300 w-lvh h-lvh"><Card/></div>;
+  return (
+    <div className=" ">
+      {/* <ShopMenu /> */}
+    </div>
+  );
 };
 
 export default page;
