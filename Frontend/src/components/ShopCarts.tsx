@@ -114,12 +114,12 @@ const ShopCarts = ({ setShopOpen }: any) => {
             View List
           </Link>
 
-          <a
-            href="#"
+          <Link
+            href={"https://buy.stripe.com/test_28E28tgnabzHdnWb6Xes001"}
             className="block rounded-sm bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
           >
             Checkout
-          </a>
+          </Link>
 
           <Link
             href={"/products/All"}
