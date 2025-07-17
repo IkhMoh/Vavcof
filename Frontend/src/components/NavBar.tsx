@@ -89,7 +89,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
-                  href={"/"}
+                  href="#contact"
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -102,10 +102,7 @@ const NavBar = () => {
           {/* Icons and Mobile Button */}
           <div className="flex items-center gap-4">
             <FaSearch className="w-5 h-5 cursor-pointer" />
-            <button
-              onClick={() => setShopOpen(true)}
-              aria-label="Toggle Menu"
-            >
+            <button onClick={() => setShopOpen(true)} aria-label="Toggle Menu">
               <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
             </button>
             <ThemeToggle />
@@ -156,12 +153,13 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
+                  href="contact"
                   className="cursor-pointer"
                   onClick={() => setMenuOpen(false)}
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

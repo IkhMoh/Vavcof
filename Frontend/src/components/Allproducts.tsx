@@ -17,21 +17,21 @@ function Allproducts() {
           className="group relative block bg-black w-full h-[594px]"
         >
           <ImagesSlider
-            images={photos[2].image.map((image: any) => image.url)}
+            images={photos[1].image.map((image: any) => image.url)}
             autoplay={true}
             direction="up"
             className="absolute inset-0  object-cover opacity-50 transition-opacity group-hover:opacity-50	"
           >
             <Image
-              src={photos[2].image[0].url}
-              alt={photos[2].place}
+              src={photos[1].image[0].url}
+              alt={photos[1].place}
               width={1300}
               height={200}
               className="h-[474px] w-full"
             />
           
           </ImagesSlider>
-          <div className="relative flex bg-black/500 p-8 md:p-12 lg:px-16 lg:py-24 z-50 justify-center items-center h-[594px]">
+          <div className="relative flex bg-black/500 p-8 md:p-12 lg:px-16 lg:py-24 z-30 justify-center items-center h-[594px]">
             <div className="text-center ltr:sm:text-left rtl:sm:text-right ">
               <div className="mt-4 sm:mt-8">
                 <Link

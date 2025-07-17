@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-async function MaterialsCard({
+function MaterialsCard({
   image,
   category,
 }: {
@@ -13,13 +13,13 @@ async function MaterialsCard({
   }
   return (
     <Link href={"/products/" + category}>
-      <div className="group relative block bg-black h-[500px] w-[690px]">
+      <div className="group relative block bg-black h-[250px] md:h-[500px] md:w-[690px] mb-2">
         <Image
           width={250}
           height={250}
           alt="category image"
           src={image}
-          className="absolute inset-0 h-full w-full object-cover opacity-75 hover:opacity-55 transition-opacity group-hover:opacity-50"
+          className="absolute inset-0 h-full w-full  opacity-75 hover:opacity-55 transition-opacity group-hover:opacity-50"
         />
 
         <div className="relative p-4 sm:p-6 lg:p-8">

@@ -25,14 +25,14 @@ function Hero() {
               className="rounded"
             /> */}
             <ImagesSlider
-              images={photos[1].image.map((image: any) => image.url)}
+              images={photos[2].image.map((image: any) => image.url)}
               autoplay={true}
               direction="up"
               className="rounded-lg"
             >
               <Image
-                src={photos[1].image[0].url}
-                alt={photos[1].place}
+                src={photos[2].image[0].url}
+                alt={photos[2].place}
                 width={1300}
                 height={1300}
                 className=""
@@ -50,8 +50,14 @@ function Hero() {
                 Discover the True Taste of{" "}
                 <span>
                   <FlipWords
-                    words={["Drinks", "coffee", "Breakfast"]}
-                    className="text-[var(--pAccent)] text-2xl  md:text-5xl font-bold 
+                    words={[
+                      "Drinks",
+                      "Hot Coffee",
+                      "Breakfast",
+                      "Desserts",
+                      "Iced Coffee",
+                    ]}
+                    className="text-[var(--pAccent)] text-3xl  md:text-5xl font-bold 
                    "
                   />
                 </span>
