@@ -80,7 +80,7 @@ function Card({ image, price, title, rating, params }: CardProps) {
                   Add Item
                 </span>
               </a>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
