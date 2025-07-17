@@ -13,5 +13,5 @@ export default function Home() {
       <MaterialsSection />
       <Contact />
     </main>
-  );
+  ); 
 }
