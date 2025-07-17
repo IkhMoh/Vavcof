@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
@@ -7,13 +8,12 @@ const Contact = () => {
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-lg text-center">
             <h2 className="text-2xl font-bold  md:text-3xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+              Got a project or an idea? Let's talk!
             </h2>
 
             <p className="hidden   sm:mt-4 sm:block">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
-              dolor officia blanditiis repellat in, vero, aperiam porro ipsum
-              laboriosam consequuntur exercitationem incidunt tempora nisi?
+              We're always happy to connect. Reach out via Gmail and let's start
+              building something great together.
             </p>
           </div>
 
@@ -31,8 +31,8 @@ const Contact = () => {
                 />
               </div>
 
-              <button
-                type="submit"
+              <Link
+                href="mailto:ikhmoh01@gmail.com"
                 className="group mt-4 text-white flex w-full items-center justify-center gap-2 rounded-md bg-[var(--pAccent)] px-5 py-3  transition focus:ring-3 focus:ring-[var(--pAccent)] focus:outline-hidden sm:mt-0 sm:w-auto"
               >
                 <span className="text-sm font-medium"> Sign Up </span>
@@ -51,7 +51,7 @@ const Contact = () => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </button>
+              </Link>
             </form>
           </div>
         </div>
