@@ -18,12 +18,9 @@ async function page({ params }: { params: Params }) {
   );
 
   const data = await res.json();
-  const hahha = <div>loading...</div>;
   return (
     <div className="bg-white h-fit mt-4 rounded-md">
-      {/* <Suspense fallback={hahha}> */}
       <Carddetails details={data.data[0]} />
-      {/* </Suspense> */}
     </div>
   );
 }
