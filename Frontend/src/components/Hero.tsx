@@ -39,7 +39,7 @@ function Hero() {
               />
             </ImagesSlider>
           </motion.div>
-          <div className=" md:col-span-2 flex  flex-col justify-center space-y-4">
+          <div className=" md:col-span-2 flex  flex-col justify-center space-y-4 max-w-[300px] md:max-w-full">
             <div className="max-w-lg md:max-w-none ml-4 ">
               <motion.h2
                 className="text-2xl font-semibold sm:text-3xl"
@@ -51,7 +51,7 @@ function Hero() {
                 <span>
                   <FlipWords
                     words={["Drinks", "coffee", "Breakfast"]}
-                    className="text-[var(--pAccent)] text-5xl font-bold 
+                    className="text-[var(--pAccent)] text-2xl  md:text-5xl font-bold 
                    "
                   />
                 </span>
