@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 
 import Providers from "./providers";
+import { Suspense } from "react";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -32,7 +33,8 @@ export default async function RootLayout({
     },
   });
   const data = await res.json();
-  console.log(data);
+  const huhu = <div className="bg-gray-300 h-screen w-screen">loading</div>;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -48,8 +50,7 @@ export default async function RootLayout({
             <div className="">
               <NavBar />
               <div className="pt-16"></div>
-              {children}
-
+              <Suspense fallback={huhu}>{children}</Suspense>
               <Footer />
             </div>
           </ThemeProvider>

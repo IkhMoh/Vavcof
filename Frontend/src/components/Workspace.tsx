@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 async function Workspace({ category }: { category: string }) {
-  await new Promise((res) => setTimeout(res, 1000)); 
+  await new Promise((res) => setTimeout(res, 3000)); 
 
   // const res = await fetch("http://localhost:1337/api/products?populate=*", {
   //   cache: "no-cache",
