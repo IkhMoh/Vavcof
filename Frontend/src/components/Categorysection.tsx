@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryCard from "./CategoryCard";
+import CategoryCard from "./Categorycard";
 async function CategorySection() {
   const res = await fetch("http://localhost:1337/api/categories?populate=*", {
     cache: "force-cache",
