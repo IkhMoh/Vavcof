@@ -11,11 +11,11 @@ const Contact = () => {
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-lg text-center">
             <h2 className="text-2xl font-bold  md:text-3xl">
-              Got a project or an idea? Let's talk!
+              Got a project or an idea? Let&apos;s talk!
             </h2>
 
             <p className="hidden   sm:mt-4 sm:block">
-              We (&apos) re always happy to connect. Reach out via Gmail and let's
+              We&apos;re always happy to connect. Reach out via Gmail and let's
               start building something great together.
             </p>
           </div>
