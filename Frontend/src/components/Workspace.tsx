@@ -12,6 +12,7 @@ async function Workspace({ category }: { category: string }) {
         revalidate: 120000,
       },
       // cache: "no-cache",
+      // https://vavcof-server-db.onrender.com/api/products
     });
     const data = await res.json();
    
