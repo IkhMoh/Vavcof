@@ -15,7 +15,7 @@ const Contact = () => {
             </h2>
 
             <p className="hidden   sm:mt-4 sm:block">
-              We&apos;re always happy to connect. Reach out via Gmail and let's
+              We&apos;re always happy to connect. Reach out via Gmail and let&apos;s
               start building something great together.
             </p>
           </div>

@@ -12,7 +12,7 @@ async function page({ params }: { params: Params }) {
     `http://localhost:1337/api/products?filters[id][$eq]=${details}&populate=*`,
     {
       next: {
-        revalidate: 120,
+        revalidate: 120000,
       },
     }
   );

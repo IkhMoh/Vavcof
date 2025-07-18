@@ -29,7 +29,7 @@ export default async function RootLayout({
 }>) {
   const res = await fetch("http://localhost:1337/api/photos?populate=*", {
     next: {
-      revalidate: 120,
+      revalidate: 120000,
     },
   });
   const data = await res.json();

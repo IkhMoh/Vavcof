@@ -5,7 +5,7 @@ import { IoArrowBackOutline } from "react-icons/io5";
 const page = async () => {
   const res = await fetch("http://localhost:1337/api/products?populate=*",{
     next: {
-      revalidate: 120,
+      revalidate: 120000,
     },
   });
   const data = await res.json();

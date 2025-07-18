@@ -9,7 +9,7 @@ async function Workspace({ category }: { category: string }) {
   
     const res = await fetch("http://localhost:1337/api/products?populate=*", {
       next: {
-        revalidate: 120,
+        revalidate: 120000,
       },
       // cache: "no-cache",
     });
