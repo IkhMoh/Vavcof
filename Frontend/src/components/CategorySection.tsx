@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
 async function CategorySection() {
-  const res = await fetch("http://localhost:1337/api/categories?populate=*", {
+  const res = await fetch("https://vavcof-server-db.onrender.com/api/categories?populate=*", {
     cache: "force-cache",
   });
   const data = await res.json();
