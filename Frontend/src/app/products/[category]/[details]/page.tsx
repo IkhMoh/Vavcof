@@ -12,7 +12,7 @@ async function page({ params }: { params: Params }) {
     `https://vavcof-server-db.onrender.com/api/products?filters[id][$eq]=${details}&populate=*`,
     {
       next: {
-        revalidate: 120000,
+        revalidate: 120,
       },
     }
   );

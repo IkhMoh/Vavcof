@@ -9,7 +9,7 @@ async function Workspace({ category }: { category: string }) {
   
     const res = await fetch("https://vavcof-server-db.onrender.com/api/products?populate=*", {
       next: {
-        revalidate: 120000,
+        revalidate: 120,
       },
       // cache: "no-cache",
       // https://vavcof-server-db.onrender.com/api/products
@@ -17,7 +17,7 @@ async function Workspace({ category }: { category: string }) {
     const data = await res.json();
    
 
-  console.log(data);
+
   let finalData = [];
 
 
@@ -31,7 +31,7 @@ async function Workspace({ category }: { category: string }) {
       return product.category === category;
     });
   }
-  console.log(finalData);
+  
 
   return (
     <>

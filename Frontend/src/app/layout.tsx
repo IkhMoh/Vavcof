@@ -28,8 +28,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const res = await fetch("https://vavcof-server-db.onrender.com/api/photos?populate=*", {
+
     next: {
-      revalidate: 120000,
+      revalidate: 120,
     },
   });
   const data = await res.json();

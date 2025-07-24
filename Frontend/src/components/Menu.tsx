@@ -5,7 +5,7 @@ import { IoArrowBackOutline } from "react-icons/io5";
 const page = async () => {
   const res = await fetch("https://vavcof-server-db.onrender.com/api/products",{
     next: {
-      revalidate: 120000,
+      revalidate: 120,
     },
   });
   const data = await res.json();
