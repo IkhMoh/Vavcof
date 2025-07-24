@@ -5,7 +5,6 @@ async function CategorySection() {
     cache: "force-cache",
   });
   const data = await res.json();
-  console.log(data)
   return (
     <section className=" bg-[var(--Light)] text-[var(--Dark)] dark:bg-[var(--Dark)] dark:text-[var(--Light)] transition-all duration-300  my-20">
       <h1 className="text-4xl font-bold ml-2 my-2"> Food Categories </h1>
