@@ -2,7 +2,7 @@ import React from "react";
 import MaterialsCard from "./MaterialsCard";
 
 async function MaterialsSection() {
-  const res = await fetch("http://localhost:1337/api/materials?populate=*", {
+  const res = await fetch("https://vavcof-server-db.onrender.com/api/materials?populate=*", {
     cache: "force-cache",
   });
   const data = await res.json();

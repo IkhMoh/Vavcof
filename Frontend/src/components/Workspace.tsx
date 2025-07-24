@@ -7,7 +7,7 @@ async function Workspace({ category }: { category: string }) {
   //   cache: "no-cache",
   // });
   
-    const res = await fetch("http://localhost:1337/api/products?populate=*", {
+    const res = await fetch("https://vavcof-server-db.onrender.com/api/products?populate=*", {
       next: {
         revalidate: 120000,
       },

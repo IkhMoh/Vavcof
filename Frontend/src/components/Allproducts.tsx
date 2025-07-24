@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ImagesSlider } from "./images-slider";
 function Allproducts() {
   const photos = useContext(PhotosContext);
-  const image = photos[1].image[0].url;
+  const image = photos[2].image[0].url;
   // const image = "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2670&auto=format&fit=crop"
   console.log(image);
   return (
@@ -17,14 +17,14 @@ function Allproducts() {
           className="group relative block bg-black w-full h-[594px]"
         >
           <ImagesSlider
-            images={photos[1].image.map((image: any) => image.url)}
+            images={photos[2].image.map((image: any) => image.url)}
             autoplay={true}
             direction="up"
             className="absolute inset-0  object-cover opacity-50 transition-opacity group-hover:opacity-50	"
           >
             <Image
-              src={photos[1].image[0].url}
-              alt={photos[1].place}
+              src={photos[2].image[0].url}
+              alt={photos[2].place}
               width={1300}
               height={200}
               className="h-[474px] w-full"

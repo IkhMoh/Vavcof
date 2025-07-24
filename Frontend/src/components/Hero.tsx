@@ -25,14 +25,14 @@ function Hero() {
               className="rounded"
             /> */}
             <ImagesSlider
-              images={photos[2].image.map((image: any) => image.url)}
+              images={photos[0].image.map((image: any) => image.url)}
               autoplay={true}
               direction="up"
               className="rounded-lg"
             >
               <Image
-                src={photos[2].image[0].url}
-                alt={photos[2].place}
+                src={photos[0].image[0].url}
+                alt={photos[0].place}
                 width={1300}
                 height={1300}
                 className=""

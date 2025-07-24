@@ -27,7 +27,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const res = await fetch("http://localhost:1337/api/photos?populate=*", {
+  const res = await fetch("https://vavcof-server-db.onrender.com/api/photos?populate=*", {
     next: {
       revalidate: 120000,
     },
