@@ -43,14 +43,14 @@ const NavBar = () => {
       <div className="container mx-auto w-full">
         <div className="flex h-16 items-center justify-between px-4 md:px-16">
           {/* Logo */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 bg-blue-500">
             <Link className="p-0 m-0 overflow-hidden" href={"/"}>
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={100}
-                height={100}
-                className="h-16 w-auto"
+                width={50}
+                height={50}
+                className="h-12 w-32"
                 priority
               />
             </Link>
