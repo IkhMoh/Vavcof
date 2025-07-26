@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 import ShopCarts from "./ShopCarts";
@@ -43,18 +42,32 @@ const NavBar = () => {
       <div className="container mx-auto w-full">
         <div className="flex h-16 items-center justify-between px-4 md:px-16">
           {/* Logo */}
-          <div className="flex items-center gap-4 bg-blue-500">
-            <Link className="p-0 m-0 overflow-hidden" href={"/"}>
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={50}
-                height={50}
-                className="h-12 w-32"
-                priority
-              />
-            </Link>
-          </div>
+          <Link href={"/"}>
+            <div className="flex">
+              {/* الأيقونة الرمزية */}
+              <div className="w-11 h-11 text-[var(--pAccent)] ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 64 64"
+                  fill="currentColor"
+                >
+                  <path d="M12 32h40v8a16 16 0 0 1-40 0v-8zm2 8a14 14 0 0 0 28 0v-6H14v6z" />
+
+                  <path d="M52 34a6 6 0 1 0 0-12h-2v12h2z" />
+
+                  <path d="M18 8c2‑4 8‑4 8 0s‑4 12‑6 12‑4‑8‑2‑12z" />
+
+                  <path d="M44 8l‑1 24h2l‑1‑24z" />
+                </svg>
+              </div>
+              <div
+                className="text-[var(--pAccent)] text-4xl font-bold mt-2"
+                style={{ fontFamily: "var(--font-saira)" }}
+              >
+                VavCof
+              </div>
+            </div>
+          </Link>
 
           {/* Desktop Nav */}
           <nav aria-label="Global" className="hidden md:block">
@@ -100,7 +113,7 @@ const NavBar = () => {
           </nav>
 
           {/* Icons and Mobile Button */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <FaSearch className="w-5 h-5 cursor-pointer" />
             <button onClick={() => setShopOpen(true)} aria-label="Toggle Menu">
               <MdOutlineShoppingCart className="w-6 h-6 cursor-pointer" />
